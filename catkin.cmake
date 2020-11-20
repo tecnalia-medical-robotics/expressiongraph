@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.1)
 project(expressiongraph)
 
 find_package(catkin REQUIRED)
@@ -47,6 +47,13 @@ target_link_libraries(${PROJECT_NAME}
 catkin_add_gtest(test_expressiongraph tests/test_expressiongraph.cpp) 
 target_link_libraries(test_expressiongraph 
   ${catkin_LIBRARIES} ${orocos_kdl_LIBRARIES} ${PROJECT_NAME} ${EIGEN3_LIBRARIES} ${Boost_LIBRARIES})
+
+set_target_properties(${PROJECT_NAME} test_expressiongraph
+    PROPERTIES
+        CXX_STANDARD 11
+        CXX_STANDARD_REQUIRED YES
+        CXX_EXTENSIONS NO
+        )
 
 # POTENTIALLY, BUILDING AND LINKING EXAMPLES
 OPTION(ENABLE_EXAMPLES "enable compilation of a series of examples" ON) 

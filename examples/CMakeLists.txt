@@ -148,6 +148,45 @@ IF(ENABLE_EXAMPLES)
  add_executable(debug1 examples/debug1.cpp)
  TARGET_LINK_LIBRARIES(debug1 ${PROJECT_NAME} ${Eigen_LIBRARIES})
 
+ set_target_properties(tutorial1
+                       tutorial2
+                       tutorial3
+                       saturate
+                       debug1
+                       solving_and_cloning
+                       mptrap_tst
+                       matrix_traits
+                       geometry
+                       expressiontree_variabletype
+                       expressiontree_example
+                       expressiontree_example2
+                       expressiontree_example3
+                       expressiontree_example4
+                       expressiontree_example5
+                       expressiontree_example6
+                       expressiontree_example7
+                       expressiontree_example8
+                       expressiontree_example9
+                       expressiontree_example10
+                       expressiontree_example11
+                       expressiontree_example12
+                       resolved_motion_rate_control
+                       expressiontree_perpendicular
+                       conversions_example
+                       expressiontree_distance_to_line
+                       expressiontree_conditional
+                       expressiontree_cached_named
+                       expressiontree_optimizer
+                       expressiontree_mimo_ex
+                       expressiontree_sensor
+                       expressiontree_motion_profile
+                       expressiontree_motion_profile2
+                       initial_value
+     PROPERTIES
+        CXX_STANDARD 11
+        CXX_STANDARD_REQUIRED YES
+        CXX_EXTENSIONS NO
+        )
 
 ENDIF(ENABLE_EXAMPLES)  
 
